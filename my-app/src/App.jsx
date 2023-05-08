@@ -12,12 +12,12 @@ function App() {
 
   return (
     <>
-    <BrowserRouter basename='/my-app'>
+    <BrowserRouter basename='/Ecommerce-Store'>
     <Header />
     <Routes>
-     <Route exact path="/my-app/" element={<Home />} />
-     <Route path='/my-app/products' element={<Products />} />
-     <Route path='/my-app/card' element={<Card />} />
+     <Route exact path="/Ecommerce-Store/" element={<Home />} />
+     <Route path='/Ecommerce-Store/products' element={<Products />} />
+     <Route path='/Ecommerce-Store/card' element={<Card />} />
     </Routes>
     <Footer />
     </BrowserRouter>
