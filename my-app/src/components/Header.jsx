@@ -14,9 +14,9 @@ const Header = () => {
       </div>
       <div>
         <ul>
-          <li className="nav_list"><Link to="/Ecommerce-Store/">Home</Link></li>
-          <li className="nav_list"><Link to="/Ecommerce-Store/products">Products</Link></li>
-          <li className="nav_list"><Link to="/Ecommerce-Store/card">Cart {`(${cart})`}</Link></li>
+          <li className="nav_list"><Link to="/my-app/">Home</Link></li>
+          <li className="nav_list"><Link to="/my-app/products">Products</Link></li>
+          <li className="nav_list"><Link to="/my-app/card">Cart {`(${cart})`}</Link></li>
         </ul>
       </div>
     </nav>
