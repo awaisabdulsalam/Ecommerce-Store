@@ -1,6 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-
 export const initialState = [];
 
 const UserSlice = createSlice({
@@ -11,7 +10,6 @@ const UserSlice = createSlice({
             state.push(action.payload)
         },
         removeItem(state, action) {
-        //    return state.splice(action.payload, 1);
            return state.filter(item => item.id !== action.payload)
         },
         increaseItems(state, action) {
