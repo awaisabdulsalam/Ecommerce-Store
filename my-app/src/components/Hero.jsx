@@ -4,7 +4,7 @@ const Hero = () => {
     <>
     <section className="hero_section">
     <div className="hero_content">
-        <h1 className="shop_now">Shop Now</h1>
+        <h1 className="shop_now">Buy Every Product here!</h1>
         <button className="hero_btn"><Link to="/Ecommerce-Store/products">Shop</Link></button>
     </div>
     </section>
