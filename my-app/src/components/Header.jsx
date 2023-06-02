@@ -10,6 +10,8 @@ const Header = () => {
     <>
     <nav>
       <div>
+        <a href="/Ecommerce-Store"></a>
+        <img src="./images/eco-logo.png" alt="Log" />
        <h2>Eco Logo</h2>
       </div>
       <div>
