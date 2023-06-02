@@ -5,7 +5,7 @@
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 nav {
-    height: 70px;
+    height: 80px;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -19,7 +19,7 @@ nav {
 }
  
 .nav_list {
-    display: inline-block;
+    /* display: inline-block; */
     margin: 0 1rem;
     position: relative;
     font-size: 1rem;
@@ -29,7 +29,7 @@ nav {
 .nav_list::after {
     content: "";
     position: absolute;
-    bottom: -5px;
+    top: 30px;
     left: 8px;
     width: 80%;
     height: 3px;
@@ -38,10 +38,6 @@ nav {
     transform: scaleX(0);
     transform-origin: center;
     transition: transform 0.3s ease-in-out;
-}
-
-.nav_list:hover,
-.nav_list.active {
 }
 
 .nav_list:hover::after,
@@ -63,6 +59,7 @@ h1 {
 }
 nav ul {
     display: flex;
+    align-items: center;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -78,10 +75,32 @@ nav ul li a {
     font-weight: 600;
     letter-spacing: .6px;
 }
-.shopping-cart {
-    /* margin-top: 5px; */
-    /* font-size: 21px; */
+.search_icon_wrapper {
+    position: relative;
+} 
+.search_input {
+    padding: 6px 15px;
+    border-radius: 30px;
+    border: 1px solid rgb(220, 219, 219);
+    font-size: 20px;
+    font-weight: 300;
+    font-style: italic;
+    height: 50px;
 }
+ 
+.shopping_cart {
+    position: absolute;
+    right: 15px;
+    top: 18px;
+    cursor: pointer;
+}
+.search_icon_wrapper:hover::after,
+.search_icon_wrapper.active::after {
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+    background-color: #ffffff;
+}
+
 .notification_show {
     color: #fff;
     background-color: red;
