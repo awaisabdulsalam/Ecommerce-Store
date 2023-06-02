@@ -16,14 +16,7 @@ nav {
     top: 0;
     z-index: 1;
 }
-/* nav ul:hover {
-    color: aqua;
-}
-.nav_list:hover {
-    color: aqua;
-    text-decoration: underline;
-    text-decoration-color: aqua;
-} */
+ 
 .nav_list {
     display: inline-block;
     margin: 0 1rem;
@@ -61,9 +54,10 @@ h1 {
     font-size: 25px;
     font-weight: 600;
 }
-h2 {
-    /* letter-spacing: 2px; */
-    font-weight: 500;
+.logo {
+    letter-spacing: 2px;
+    font-weight: 600;
+    font-size: 25px;
     cursor: pointer;
 }
 nav ul {
@@ -80,6 +74,29 @@ nav ul li a {
     text-decoration: none;
     padding: 0.5rem;
     font-size: 20px;
+    font-weight: 600;
+    letter-spacing: .6px;
+}
+.shopping-cart {
+    /* margin-top: 5px; */
+    /* font-size: 21px; */
+}
+.notification_show {
+    background-color: red;
+    padding: 4px;
+    font-size: 16px;
+    border-radius: 50%;
+    position: absolute;
+    top: -10px;
+    right: -5px;
+    height: 20px;
+    width: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.notification_hide {
+    display: none;
 }
 .hero_section {
     display: flex;
