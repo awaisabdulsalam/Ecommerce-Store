@@ -9,6 +9,7 @@ const Header = () => {
   });
 
   const [inputText, setInputText] = useState('');
+  const [searchInput, setSearchInput] = useState('')
 
   const cart = data.length;
 
@@ -17,6 +18,10 @@ const Header = () => {
     return location.pathname === route;
   }
 
+  const handleSubmit = () => {
+    console.log(inputText);
+    setSearchInput(inputText);
+  }
   return (
     <>
     <nav>
@@ -34,7 +39,7 @@ const Header = () => {
           value={inputText}
           onChange={(e) => setInputText(e.target.value)}
           />
-          <FaSearch  className='shopping_cart' />
+          <FaSearch  onClick={handleSubmit} className='shopping_cart' />
           </li>
           <li className={`nav_list ${isActivated("/Ecommerce-Store/card") ? "active" : ""}`}><Link to="/Ecommerce-Store/card">
             <FaShoppingCart  className='shopping-cart' /><span className={cart === 0 ? 'notification_hide' : 'notification_show'}>{`${cart}`}</span></Link></li>
