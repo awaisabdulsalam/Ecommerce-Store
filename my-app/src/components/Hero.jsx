@@ -8,6 +8,7 @@ import image5 from "../images/arm-chair-01.jpg";
 
 const Hero = () => {
   const imageArray = [image1, image2, image3, image4, image5];
+  const categories = ["chairs", "sofa", "phones", "watches", "wireless"];
 
   const [sliderImage, setSliderImage] = useState(0);
 
@@ -21,7 +22,15 @@ const Hero = () => {
   return (
     <main className="hero_main">
       <section className="hero_section">
-        <section className="hero_section_one"></section>
+        <section className="hero_section_one">
+          {categories.map((category, index) => {
+            return (
+              <div key={index} className="hero_one_btn">
+                <button className="category_btn">{category}</button>
+              </div>
+            );
+          })}
+        </section>
         <section className="hero_section_two">
           <div className="sub_hero_sec_two">
             <div className="hero_content">
