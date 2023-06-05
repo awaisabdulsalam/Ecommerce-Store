@@ -1,16 +1,14 @@
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import { useState } from "react";
 import image1 from "../images/double-sofa-01.png";
-import image2 from "../images/double-sofa-02.png";
-import image3 from "../images/double-sofa-03.png";
-import { current } from "@reduxjs/toolkit";
+import image2 from "../images/phone-05.jpg";
+import image3 from "../images/watch-03.jpg";
+import image4 from "../images/wireless-01.png";
+import image5 from "../images/arm-chair-01.jpg";
 
 const Hero = () => {
-  const imageArray = [image1, image2, image3];
-  // const images = imageArray.map((image) => {
-  //   // console.log(image);
-  //   return image;
-  // });
+  const imageArray = [image1, image2, image3, image4, image5];
+
   const [sliderImage, setSliderImage] = useState(0);
 
   const prevImage = () => {
@@ -25,7 +23,7 @@ const Hero = () => {
       <section className="hero_section">
         <section className="hero_section_one"></section>
         <section className="hero_section_two">
-          <div>
+          <div className="sub_hero_sec_two">
             <div className="hero_content">
               <div>
                 <h1 className="hero_heading">50% Off for First Shopping</h1>
@@ -44,15 +42,20 @@ const Hero = () => {
             {imageArray.map((image, index) => {
               return (
                 sliderImage === index && (
-                  <div key={index}>
+                  <div key={index} className="image_div">
                     <img src={image} alt="Image" className="slider_image" />
                   </div>
                 )
               );
             })}
           </div>
-          <FaArrowLeft onClick={prevImage} />
-          <FaArrowRight onClick={nextImage} />
+          <div className="arrow_section">
+            <FaArrowLeft onClick={prevImage} className="arrow_icon arrow_one" />
+            <FaArrowRight
+              onClick={nextImage}
+              className="arrow_icon arrow_two"
+            />
+          </div>
         </section>
       </section>
     </main>
