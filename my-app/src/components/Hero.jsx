@@ -1,43 +1,34 @@
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import image1 from "../images/double-sofa-01.png";
 import image2 from "../images/phone-05.jpg";
 import image3 from "../images/watch-03.jpg";
 import image4 from "../images/wireless-01.png";
 import image5 from "../images/arm-chair-01.jpg";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
-  const imageArray = [
-    // {
-    //   key: 1,
-    //   src: image1,
-    //   heading: "50% Off for First Shopping",
-    //   desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam provident reiciendis quae dicta. Aut, distinctio fugiat at namdolorum ad!",
-    //   btn: "Visit Now",
-    // },
-    // {
-    //   key: 2,
-    //   src: image2,
-    //   heading: "50% Off for First Shopping",
-    //   desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam provident reiciendis quae dicta. Aut, distinctio fugiat at namdolorum ad!",
-    //   btn: "Visit Now",
-    // },
-    image1,
-    image2,
-    image3,
-    image4,
-    image5,
-  ];
-  const categories = ["chairs", "sofa", "phones", "watches", "wireless"];
+  const imageArray = [image1, image2, image3, image4, image5];
+  const categories = ["chair", "sofa", "mobile", "watche", "wireless"];
 
   const [sliderImage, setSliderImage] = useState(0);
+  // const [category, setCategory] = useState();
+  const [type, setType] = useState();
 
+  const handleType = (e) => {
+    setType(e.target.textContent);
+    console.log(type);
+  };
   const prevImage = () => {
     setSliderImage(sliderImage === 0 ? imageArray.length - 1 : sliderImage - 1);
   };
   const nextImage = () => {
     setSliderImage(sliderImage === imageArray.length - 1 ? 0 : sliderImage + 1);
   };
+
+  useEffect(() => {
+    console.log(type);
+  }, [type]);
 
   return (
     <main className="hero_main">
@@ -46,7 +37,11 @@ const Hero = () => {
           {categories.map((category, index) => {
             return (
               <div key={index} className="hero_one_btn">
-                <button className="category_btn">{category}</button>
+                <Link to="/Ecommerce-Store/categories">
+                  <button className="category_btn" onClick={handleType}>
+                    {category}
+                  </button>
+                </Link>
               </div>
             );
           })}
