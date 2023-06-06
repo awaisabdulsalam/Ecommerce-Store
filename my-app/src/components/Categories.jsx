@@ -1,6 +1,6 @@
 import HomeProducts from "./HomeProducts";
 
-const Categories = () => {
+const Categories = ({ filterItems, data }) => {
   return <div>{<HomeProducts />}</div>;
 };
 

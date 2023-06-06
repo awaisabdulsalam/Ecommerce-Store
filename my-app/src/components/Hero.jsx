@@ -9,15 +9,14 @@ import { Link } from "react-router-dom";
 
 const Hero = () => {
   const imageArray = [image1, image2, image3, image4, image5];
-  const categories = ["chair", "sofa", "mobile", "watche", "wireless"];
+  const categories = ["chair", "sofa", "mobile", "watch", "wireless"];
 
   const [sliderImage, setSliderImage] = useState(0);
-  // const [category, setCategory] = useState();
-  const [type, setType] = useState();
+  const [category, setCategory] = useState();
 
   const handleType = (e) => {
-    setType(e.target.textContent);
-    console.log(type);
+    setCategory(e.target.textContent);
+    console.log(category);
   };
   const prevImage = () => {
     setSliderImage(sliderImage === 0 ? imageArray.length - 1 : sliderImage - 1);
@@ -27,8 +26,8 @@ const Hero = () => {
   };
 
   useEffect(() => {
-    console.log(type);
-  }, [type]);
+    console.log(category);
+  }, [category]);
 
   return (
     <main className="hero_main">
