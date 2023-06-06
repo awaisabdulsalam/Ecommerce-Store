@@ -7,7 +7,27 @@ import image4 from "../images/wireless-01.png";
 import image5 from "../images/arm-chair-01.jpg";
 
 const Hero = () => {
-  const imageArray = [image1, image2, image3, image4, image5];
+  const imageArray = [
+    // {
+    //   key: 1,
+    //   src: image1,
+    //   heading: "50% Off for First Shopping",
+    //   desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam provident reiciendis quae dicta. Aut, distinctio fugiat at namdolorum ad!",
+    //   btn: "Visit Now",
+    // },
+    // {
+    //   key: 2,
+    //   src: image2,
+    //   heading: "50% Off for First Shopping",
+    //   desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam provident reiciendis quae dicta. Aut, distinctio fugiat at namdolorum ad!",
+    //   btn: "Visit Now",
+    // },
+    image1,
+    image2,
+    image3,
+    image4,
+    image5,
+  ];
   const categories = ["chairs", "sofa", "phones", "watches", "wireless"];
 
   const [sliderImage, setSliderImage] = useState(0);
@@ -33,18 +53,25 @@ const Hero = () => {
         </section>
         <section className="hero_section_two">
           <div className="sub_hero_sec_two">
+            {/* {imageArray.map((image, index) => {
+              return (
+                sliderImage === index && ( */}
+            {/* <> */}
             <div className="hero_content">
               <div>
+                {/* <h1 className="hero_heading">{image.heading}</h1> */}
                 <h1 className="hero_heading">50% Off for First Shopping</h1>
               </div>
               <div>
+                {/* <p className="hero_desc">{image.desc}</p> */}
                 <p className="hero_desc">
                   Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam
-                  provident reiciendis quae dicta. Aut, distinctio fugiat at nam
-                  dolorum ad!
+                  provident reiciendis quae dicta. Aut, distinctio fugiat at
+                  namdolorum ad!
                 </p>
               </div>
               <div>
+                {/* <button className="hero_btn">{image.btn}</button> */}
                 <button className="hero_btn">Visit Now</button>
               </div>
             </div>
