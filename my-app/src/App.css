@@ -134,7 +134,7 @@ nav ul li a {
     height: 100vh;
     width: 90%;
     position: relative;
-    /* border: 2px solid red; */
+     border: 2px solid red; 
     z-index: 0;
 }
 .hero_section_one {
@@ -269,8 +269,18 @@ background-color: #5b85e6;
 } 
 /*  */
 
+.parent_products_section {
+    display: grid;
+        direction: row;
+        /* place-items: center; */
+        grid-template-columns: 300px 1fr;
+    border: 2px solid blue;
+}
+
 .products_section {
     display: grid;
+    /* place-items: center; */
+    border: 2px solid tomato;
     /* justify-content: center; */
     /* border: 2px solid purple; */
 }
@@ -278,7 +288,7 @@ background-color: #5b85e6;
     display: grid;
     justify-content: center;
     place-items: center;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 10px; 
     /* border: 2px solid black; */
     padding: 30px 10px;

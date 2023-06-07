@@ -6,9 +6,9 @@ import Card from "./components/Card";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import Categories from "./components/Categories";
-import products from "./products";
-import { useState } from "react";
+// import Categories from "./components/Categories";
+// import products from "./products";
+// import { useState } from "react";
 
 function App() {
   // const [data, setData] = useState();

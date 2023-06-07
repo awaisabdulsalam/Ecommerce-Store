@@ -8,10 +8,10 @@ import image2 from "../images/phone-05.jpg";
 import image3 from "../images/watch-03.jpg";
 import image4 from "../images/wireless-01.png";
 import image5 from "../images/arm-chair-01.jpg";
+import Sidebar from "./Sidebar";
 
 const Hero = () => {
   const imageArray = [image1, image2, image3, image4, image5];
-  const categories = ["chair", "sofa", "mobile", "watch", "wireless"];
 
   const [sliderImage, setSliderImage] = useState(0);
   const [category, setCategory] = useState("");
@@ -38,17 +38,7 @@ const Hero = () => {
     <main className="hero_main">
       <section className="hero_section">
         <section className="hero_section_one">
-          {categories.map((category, index) => {
-            return (
-              <div key={index} className="hero_one_btn">
-                {/* <Link to="/Ecommerce-Store/categories"> */}
-                <button className="category_btn" onClick={handleType}>
-                  {category}
-                </button>
-                {/* </Link> */}
-              </div>
-            );
-          })}
+          <Sidebar />
         </section>
         <section className="hero_section_two">
           <div className="sub_hero_sec_two">
