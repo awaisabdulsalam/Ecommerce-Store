@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-
+import products from "../../products";
 export const initialState = [];
 
 const UserSlice = createSlice({
@@ -29,6 +29,12 @@ const UserSlice = createSlice({
     },
     buttonFilter(state, action) {
       console.log(action.payload);
+      const selectedButton = products.filter((product) => {
+        return product.category === action.payload;
+      });
+      selectedButton.forEach((product) => {
+        console.log(product.category);
+      });
     },
   },
 });

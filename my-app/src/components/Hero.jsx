@@ -14,12 +14,13 @@ const Hero = () => {
   const categories = ["chair", "sofa", "mobile", "watch", "wireless"];
 
   const [sliderImage, setSliderImage] = useState(0);
-  const [category, setCategory] = useState();
+  const [category, setCategory] = useState("");
 
   const dispatch = useDispatch();
   const handleType = (e) => {
     setCategory(e.target.textContent);
-    dispatch(buttonFilter(category));
+    const buttonText = e.target.textContent;
+    dispatch(buttonFilter(buttonText));
   };
   // console.log(category);
   const prevImage = () => {
@@ -30,7 +31,7 @@ const Hero = () => {
   };
 
   useEffect(() => {
-    console.log(category);
+    // console.log(category);
   }, [category]);
 
   return (
