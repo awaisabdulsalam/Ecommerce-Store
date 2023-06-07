@@ -1,11 +1,13 @@
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
+import { buttonFilter } from "../store/slices/UserSlice";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+// import { Link } from "react-router-dom";
 import image1 from "../images/double-sofa-01.png";
 import image2 from "../images/phone-05.jpg";
 import image3 from "../images/watch-03.jpg";
 import image4 from "../images/wireless-01.png";
 import image5 from "../images/arm-chair-01.jpg";
-import { Link } from "react-router-dom";
 
 const Hero = () => {
   const imageArray = [image1, image2, image3, image4, image5];
@@ -14,10 +16,12 @@ const Hero = () => {
   const [sliderImage, setSliderImage] = useState(0);
   const [category, setCategory] = useState();
 
+  const dispatch = useDispatch();
   const handleType = (e) => {
     setCategory(e.target.textContent);
-    console.log(category);
+    dispatch(buttonFilter(category));
   };
+  // console.log(category);
   const prevImage = () => {
     setSliderImage(sliderImage === 0 ? imageArray.length - 1 : sliderImage - 1);
   };
@@ -36,11 +40,11 @@ const Hero = () => {
           {categories.map((category, index) => {
             return (
               <div key={index} className="hero_one_btn">
-                <Link to="/Ecommerce-Store/categories">
-                  <button className="category_btn" onClick={handleType}>
-                    {category}
-                  </button>
-                </Link>
+                {/* <Link to="/Ecommerce-Store/categories"> */}
+                <button className="category_btn" onClick={handleType}>
+                  {category}
+                </button>
+                {/* </Link> */}
               </div>
             );
           })}

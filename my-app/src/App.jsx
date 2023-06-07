@@ -11,12 +11,12 @@ import products from "./products";
 import { useState } from "react";
 
 function App() {
-  const [data, setData] = useState();
-  const filterItems = (category) => {
-    const filterData = products.filter((item) => item.category === category);
-    setData(filterData);
-  };
-  console.log(data + "DFGHJ");
+  // const [data, setData] = useState();
+  // const filterItems = (category) => {
+  //   const filterData = products.filter((item) => item.category === category);
+  //   setData(filterData);
+  // };
+  // console.log(data + "DFGHJ");
 
   return (
     <>
@@ -26,10 +26,10 @@ function App() {
           <Route exact path="/Ecommerce-Store/" element={<Home />} />
           <Route path="/Ecommerce-Store/products" element={<Products />} />
           <Route path="/Ecommerce-Store/card" element={<Card />} />
-          <Route
+          {/* <Route
             path="/Ecommerce-Store/categories"
             element={<Categories filterItems={filterItems} data={data} />}
-          />
+          /> */}
         </Routes>
         <Footer />
       </BrowserRouter>
