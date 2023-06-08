@@ -1,8 +1,7 @@
 // import { useState } from "react";
 
-const Sidebar = ({ category, setCategory }) => {
-
-  const categories = ["chair", "sofa", "mobile", "watch", "wireless"];
+const Sidebar = ({ filterCategory }) => {
+  const categories = ["all", "chair", "sofa", "mobile", "watch", "wireless"];
 
   return (
     <div>
@@ -11,7 +10,7 @@ const Sidebar = ({ category, setCategory }) => {
           <div key={index} className="hero_one_btn">
             <button
               className="category_btn"
-              onClick={() => setCategory(category)}
+              onClick={() => filterCategory(category)}
             >
               {category}
             </button>

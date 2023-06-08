@@ -4,6 +4,9 @@
     box-sizing: border-box;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+
+/*****************            NAV         **********************/
+
 nav {
     height: 80px;
     display: flex;
@@ -119,6 +122,12 @@ nav ul li a {
 .notification_hide {
     display: none;
 }
+
+
+
+
+/*****************            HERO SECTION         **********************/
+
 .hero_main {
     display: flex;
     justify-content: center;
@@ -127,11 +136,11 @@ nav ul li a {
     border: 5px solid black;
 }
 .hero_section {
-    display: grid;
-    direction: row;
+    display: flex;
+    /* direction: row; */
     place-items: center;
     grid-template-columns: 300px 1fr;
-    height: 100vh;
+    height: 80vh;
     width: 90%;
     position: relative;
      border: 2px solid red; 

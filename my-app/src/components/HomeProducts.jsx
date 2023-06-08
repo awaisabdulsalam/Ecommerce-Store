@@ -2,30 +2,38 @@ import Sidebar from "./Sidebar";
 import SelectedProduct from "./SelectedProduct";
 import { useState } from "react";
 import { useEffect } from "react";
+import products from "../products";
 
 const Products = () => {
-  const [category, setCategory] = useState();
-  const [products, setProducts] = useState(true);
+  const allCategories = [
+    "all",
+    ...new Set(products.map((product) => product.category)),
+  ];
 
-  useEffect(() => {
-    setProducts(false);
-    console.log("Hello");
-  }, [category]);
+  const [allProducts, setAllProducts] = useState(products);
+  const [categories, setCategories] = useState(allCategories);
+
+  const filterCategory = (category) => {
+    if (category === "all") {
+      setAllProducts(products);
+      return;
+    }
+    const filterProduct = products.filter(
+      (product) => product.category === category
+    );
+    setAllProducts(filterProduct);
+  };
 
   return (
     <>
       <main>
         <section className="parent_products_section">
           <section className="hero_section_one">
-            <Sidebar setCategory={setCategory} />
+            <Sidebar categories={categories} filterCategory={filterCategory} />
           </section>
           <section>
-            {/* {products && <SelectedProduct />} */}
-            {products === true ? (
-              <SelectedProduct />
-            ) : (
-              <SelectedProduct category={category} />
-            )}
+            {/* <SelectedProduct category={category} /> */}
+            <SelectedProduct allProducts={allProducts} />
           </section>
         </section>
       </main>

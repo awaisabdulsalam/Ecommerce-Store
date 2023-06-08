@@ -37,9 +37,9 @@ const Hero = () => {
   return (
     <main className="hero_main">
       <section className="hero_section">
-        <section className="hero_section_one">
+        {/* <section className="hero_section_one">
           <Sidebar />
-        </section>
+        </section> */}
         <section className="hero_section_two">
           <div className="sub_hero_sec_two">
             {/* {imageArray.map((image, index) => {
