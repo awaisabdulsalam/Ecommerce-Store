@@ -1,7 +1,6 @@
 // import { useState } from "react";
 
 const Sidebar = ({ category, setCategory }) => {
-  //   const [category, setCategory] = useState("");
 
   const categories = ["chair", "sofa", "mobile", "watch", "wireless"];
 
