@@ -24,7 +24,7 @@ const Header = () => {
     // setSearchInput(inputText);
   };
 
-  console.log(inputText);
+  // console.log(inputText);
 
   return (
     <>

@@ -3,7 +3,7 @@ import SelectedProduct from "./SelectedProduct";
 import { useState } from "react";
 import products from "../products";
 
-const Products = ({ inputText }) => {
+const HomeProducts = ({ inputText }) => {
   const allCategories = [
     "all",
     ...new Set(products.map((product) => product.category)),
@@ -30,7 +30,7 @@ const Products = ({ inputText }) => {
       <main>
         <section className="parent_products_section">
           <section className="hero_section_one">
-            <Sidebar categories={categories} filterCategory={filterCategory} />
+            <Sidebar categories={categories} filterCategory={filterCategory} inputText={inputText} />
           </section>
           <section>
             <SelectedProduct allProducts={allProducts} inputText={inputText} />
@@ -42,4 +42,4 @@ const Products = ({ inputText }) => {
   );
 };
 
-export default Products;
+export default HomeProducts;

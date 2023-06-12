@@ -1,6 +1,6 @@
 // import { useState } from "react";
 
-const Sidebar = ({ filterCategory }) => {
+const Sidebar = ({ filterCategory, inputText }) => {
   const categories = ["all", "chair", "sofa", "mobile", "watch", "wireless"];
 
   return (
@@ -9,7 +9,7 @@ const Sidebar = ({ filterCategory }) => {
         return (
           <div key={index} className="hero_one_btn">
             <button
-              className="category_btn"
+              className={`category_btn ? ${category === inputText ? 'active' : ''}`}
               onClick={() => filterCategory(category)}
             >
               {category}
