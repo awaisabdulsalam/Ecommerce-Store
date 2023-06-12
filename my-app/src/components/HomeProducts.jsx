@@ -30,7 +30,7 @@ const HomeProducts = ({ inputText }) => {
       <main>
         <section className="parent_products_section">
           <section className="hero_section_one">
-            <Sidebar categories={categories} filterCategory={filterCategory} inputText={inputText} />
+            <Sidebar categories={categories} filterCategory={filterCategory}  />
           </section>
           <section>
             <SelectedProduct allProducts={allProducts} inputText={inputText} />

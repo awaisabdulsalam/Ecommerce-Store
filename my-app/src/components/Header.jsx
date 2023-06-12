@@ -10,8 +10,7 @@ const Header = () => {
   });
 
   const [inputText, setInputText] = useState("");
-  // const [searchInput, setSearchInput] = useState('')
-
+console.log(inputText);
   const cart = data.length;
 
   const location = useLocation();
@@ -21,10 +20,8 @@ const Header = () => {
 
   const handleSubmit = () => {
     console.log(inputText);
-    // setSearchInput(inputText);
   };
 
-  // console.log(inputText);
 
   return (
     <>

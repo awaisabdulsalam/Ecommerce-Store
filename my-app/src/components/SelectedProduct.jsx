@@ -60,7 +60,7 @@
 import { useDispatch } from "react-redux";
 import { addItem } from "../store/slices/UserSlice";
 
-const SelectedProduct = ({ allProducts, inputText }) => {
+const SelectedProduct = ({ allProducts, inputText="Hello" }) => {
   const dispatch = useDispatch();
 
   const addToCart = (product) => {
@@ -68,10 +68,13 @@ const SelectedProduct = ({ allProducts, inputText }) => {
     product.count = 1;
   };
   console.log(inputText);
-
-  // Filter products based on the search input
   const filteredProducts = allProducts.filter(
-    (product) => product.category.toLowerCase() === inputText.toLowerCase()
+    (product) => {
+      console.log(typeof product.category);
+      const convert = product.category.toLowerCase();
+      console.log(convert);
+      return product.category.toLowerCase() === inputText.toLowerCase();
+    }
   );
 
   return (
@@ -80,7 +83,8 @@ const SelectedProduct = ({ allProducts, inputText }) => {
         <img src="../assets/images/table.jpg" alt="" />
         <div className="products">
           {inputText
-            ? filteredProducts.map((product) => (
+            ? filteredProducts.map((product) =>{
+              return (
                 <div key={product.id} className="product">
                   <div className="product_img_cont">
                     <img
@@ -101,8 +105,9 @@ const SelectedProduct = ({ allProducts, inputText }) => {
                     </button>
                   </div>
                 </div>
-              ))
-            : allProducts.map((product) => (
+              )})
+            : allProducts.map((product) => {
+            return  (
                 <div key={product.id} className="product">
                   <div className="product_img_cont">
                     <img
@@ -123,7 +128,7 @@ const SelectedProduct = ({ allProducts, inputText }) => {
                     </button>
                   </div>
                 </div>
-              ))}
+              )})}
         </div>
       </section>
     </>
