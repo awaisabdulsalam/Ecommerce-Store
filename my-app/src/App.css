@@ -171,6 +171,13 @@ nav ul li a {
     cursor: pointer;
     width: 200px;
 }
+.category_btn:hover {
+    color: rgb(255, 255, 255);
+    background-color: rgb(91, 133, 230);
+    border: 1px solid rgb(91, 133, 230);
+    transition: all .2s ease-in-out;
+    opacity: .7;
+}
 .category_btn:active {
     color: rgb(255, 255, 255);
     background-color: rgb(91, 133, 230);
