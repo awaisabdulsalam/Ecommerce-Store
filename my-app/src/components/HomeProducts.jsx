@@ -1,17 +1,17 @@
 import Sidebar from "./Sidebar";
 import SelectedProduct from "./SelectedProduct";
 import { useState } from "react";
-import { useEffect } from "react";
 import products from "../products";
 
-const Products = () => {
+const Products = ({ inputText }) => {
   const allCategories = [
     "all",
     ...new Set(products.map((product) => product.category)),
   ];
-
+  
   const [allProducts, setAllProducts] = useState(products);
   const [categories, setCategories] = useState(allCategories);
+
 
   const filterCategory = (category) => {
     if (category === "all") {
@@ -26,17 +26,18 @@ const Products = () => {
 
   return (
     <>
+      {/* //     {inputText === allProducts.category || */}(
       <main>
         <section className="parent_products_section">
           <section className="hero_section_one">
             <Sidebar categories={categories} filterCategory={filterCategory} />
           </section>
           <section>
-            {/* <SelectedProduct category={category} /> */}
-            <SelectedProduct allProducts={allProducts} />
+            <SelectedProduct allProducts={allProducts} inputText={inputText} />
           </section>
         </section>
       </main>
+      ){/* // } */}
     </>
   );
 };
