@@ -33,7 +33,7 @@ const HomeProducts = ({ inputText }) => {
             <Sidebar categories={categories} filterCategory={filterCategory}  />
           </section>
           <section>
-            <SelectedProduct allProducts={allProducts} inputText={inputText} />
+            <SelectedProduct allProducts={allProducts} />
           </section>
         </section>
       </main>

@@ -3,24 +3,26 @@ import { Link, useLocation } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { useState } from "react";
 import HomeProducts from "./HomeProducts";
+import { getInputText } from "./SelectedProduct";
+import { useEffect, useRef } from "react";
 
 const Header = () => {
   const data = useSelector((state) => {
     return state.users;
   });
 
-  const [inputText, setInputText] = useState();
+  const [inputText, setInputText] = useState("Hi");
+  getInputText(inputText);
+
 console.log(inputText);
+
+
   const cart = data.length;
 
   const location = useLocation();
   const isActivated = (route) => {
     return location.pathname === route;
   };
-
-  const handleSubmit = () => {
-  };
-
 
   return (
     <>
@@ -52,7 +54,7 @@ console.log(inputText);
                 value={inputText}
                 onChange={(e) => setInputText(e.target.value)}
               />
-              <FaSearch onClick={handleSubmit} className="shopping_cart" />
+              <FaSearch className="shopping_cart" />
             </li>
             <li
               className={`nav_list ${
@@ -71,7 +73,7 @@ console.log(inputText);
           </ul>
         </div>
       </nav>
-      {inputText && <HomeProducts inputText={inputText} />}
+      {/* {inputText && <HomeProducts inputText={inputText} />} */}
     </>
   );
 };
