@@ -9,7 +9,7 @@ const Header = () => {
     return state.users;
   });
 
-  const [inputText, setInputText] = useState("");
+  const [inputText, setInputText] = useState();
 console.log(inputText);
   const cart = data.length;
 
@@ -19,7 +19,6 @@ console.log(inputText);
   };
 
   const handleSubmit = () => {
-    console.log(inputText);
   };
 
 

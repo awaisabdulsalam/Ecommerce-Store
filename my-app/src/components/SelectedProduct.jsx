@@ -59,20 +59,26 @@
 
 import { useDispatch } from "react-redux";
 import { addItem } from "../store/slices/UserSlice";
+import { useEffect } from "react";
+import { useRef } from "react";
 
-const SelectedProduct = ({ allProducts, inputText="Hello" }) => {
+const SelectedProduct = ({ allProducts, inputText = "" }) => {
   const dispatch = useDispatch();
+  const sectionRef = useRef(null);
 
   const addToCart = (product) => {
     dispatch(addItem(product));
     product.count = 1;
   };
-  console.log(inputText);
+
+  useEffect(() => {
+     if (sectionRef.current) {
+       sectionRef.current.scrollIntoView({ behavior: "smooth" });
+     }
+  }, [inputText])
+
   const filteredProducts = allProducts.filter(
     (product) => {
-      console.log(typeof product.category);
-      const convert = product.category.toLowerCase();
-      console.log(convert);
       return product.category.toLowerCase() === inputText.toLowerCase();
     }
   );
