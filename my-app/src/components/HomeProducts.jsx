@@ -2,8 +2,9 @@ import Sidebar from "./Sidebar";
 import SelectedProduct from "./SelectedProduct";
 import { useState } from "react";
 import products from "../products";
+import { FaSearch } from "react-icons/fa";
 
-const HomeProducts = ({ inputText }) => {
+const HomeProducts = () => {
   const allCategories = [
     "all",
     ...new Set(products.map((product) => product.category)),
@@ -11,6 +12,8 @@ const HomeProducts = ({ inputText }) => {
   
   const [allProducts, setAllProducts] = useState(products);
   const [categories, setCategories] = useState(allCategories);
+
+   const [inputText, setInputText] = useState("");
 
 
   const filterCategory = (category) => {
@@ -26,18 +29,36 @@ const HomeProducts = ({ inputText }) => {
 
   return (
     <>
-      {/* //     {inputText === allProducts.category || */}(
       <main>
         <section className="parent_products_section">
           <section className="hero_section_one">
-            <Sidebar categories={categories} filterCategory={filterCategory}  />
+            <ul>
+              <li className="nav_list search_icon_wrapper">
+                <input
+                  type="text"
+                  placeholder="Search"
+                  className="search_input"
+                  value={inputText}
+                  onChange={(e) => setInputText(e.target.value)}
+                />
+                <FaSearch className="shopping_cart" />
+              </li>
+            </ul>
+            <Sidebar
+              categories={categories}
+              filterCategory={filterCategory}
+              inputText={inputText}
+              setInputText={setInputText}
+              allProducts={allProducts}
+            />
           </section>
-          <section>
-            <SelectedProduct allProducts={allProducts} />
+          <section className="home_products_section">
+            {inputText && <SelectedProduct inputText={inputText} />}
+            {allProducts && <SelectedProduct allProducts={allProducts} />}
+            {!inputText && !allProducts && <SelectedProduct />}
           </section>
         </section>
       </main>
-      ){/* // } */}
     </>
   );
 };

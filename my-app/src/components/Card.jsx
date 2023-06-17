@@ -3,6 +3,7 @@ import { AiFillPlusSquare, AiFillMinusSquare } from 'react-icons/ai';
 import { MdDelete } from 'react-icons/md';
 import { increaseItems,decreaseItems, removeItem, filterItems } from "../store/slices/UserSlice";
 import { useEffect } from "react";
+import { useState } from "react";
 
 const Card = () => {
 
@@ -12,6 +13,9 @@ const Card = () => {
     return state.users
   });
 
+  console.log(data);
+
+  // const [removeProduct, setRemoveProduct] = useState(data);
 
   const deleteItem = (id) => {
     dispatch(removeItem(id))
@@ -22,6 +26,9 @@ const Card = () => {
 
   const decreaseItem = (id) => {
     dispatch(decreaseItems(id));
+    // if(removeProduct.length < 0){
+    //   setRemoveProduct(0);
+    // }
   }
   useEffect(() => {
     filterItems()
@@ -30,19 +37,23 @@ const Card = () => {
  const findTotalPrice = () => {
   let totalPrice = 0;
   for(let item of data){
-    totalPrice += item.price * item.count;
+        totalPrice += item.price * (item.count + 1);
+  
   }
-  return totalPrice.toFixed(2);
+  return totalPrice.toFixed(0);
 }
 
 const totalPrice = findTotalPrice();
+
 
   return (
     <>
       <section className="card_section">
         <div className="card_items">
           {data.map((item) => {
-            return (            
+            console.log(item.count);
+            return ( 
+              // removeItem.length >  0 &&          
             <div key={item.id} className="single_card_item">
               <div>
                 <img src={item.imgUrl} alt="img" className="card_img" />
@@ -51,15 +62,15 @@ const totalPrice = findTotalPrice();
                 <h2>{item.productName}</h2>
               </div>
               <div className="quantity">
-                <AiFillMinusSquare className="card_icon" onClick={()=> decreaseItem(item.id)} />
-                <p className="one">{item.count}</p>
+                <AiFillMinusSquare className="card_icon" onClick={() => decreaseItem(item.id)} />
+                <p className="one">{item.count + 1 }</p>
                 <AiFillPlusSquare className="card_icon" onClick={() => increaseItem(item.id)} />
               </div>
               <div className="card_price">
                  <p>${item.price}</p>
               </div>
               <div className="card_price">
-                 <p>${item.price * item.count}</p> 
+                 <p>${ item.count === 0 ? item.price : item.price * (item.count + 1)}</p> 
               </div>
               <div>
                 <MdDelete className='delete_icon' onClick={() => deleteItem(item.id)} />

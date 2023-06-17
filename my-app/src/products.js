@@ -53,7 +53,7 @@ const products = [
   {
     id: "02",
     count: 0,
-    productName: "Rivet Bigelow Modern ",
+    productName: "Rivet Bigelow",
     imgUrl: productImg02,
     category: "sofa",
     price: 253,
@@ -77,7 +77,7 @@ const products = [
   {
     id: "03",
     count: 0,
-    productName: "Amazon Brand Sofa",
+    productName: "Amazon Sofa",
     imgUrl: productImg03,
     category: "sofa",
     price: 173,
@@ -168,7 +168,7 @@ const products = [
   {
     id: "06",
     count: 0,
-    productName: "Fllufy Sheep Sofa",
+    productName: "Sheep Sofa",
     imgUrl: productImg07,
     category: "sofa",
     price: 163,
@@ -191,7 +191,7 @@ const products = [
   {
     id: "07",
     count: 0,
-    productName: "Sakarias Armchair",
+    productName: "Sakarias chair",
     imgUrl: productImg08,
     category: "chair",
     price: 99,
@@ -215,7 +215,7 @@ const products = [
   {
     id: "27",
     count: 0,
-    productName: "Modern Arm Sofa",
+    productName: "Arm Sofa",
     imgUrl: productImg09,
     category: "sofa",
     price: 173,
@@ -287,7 +287,7 @@ const products = [
   {
     id: "10",
     count: 0,
-    productName: "Apple iPhone 12 Pro",
+    productName: "iPhone 12",
     imgUrl: productImg14,
     category: "mobile",
     price: 799,
@@ -310,7 +310,7 @@ const products = [
   {
     id: "25",
     count: 0,
-    productName: "Sakarias Armchair",
+    productName: "Sakarias Chair",
     imgUrl: productImg15,
     category: "chair",
     price: 99,
@@ -333,7 +333,7 @@ const products = [
   {
     id: "11",
     count: 0,
-    productName: "Apple iPhone 12 Max",
+    productName: "iPhone 12",
     imgUrl: productImg16,
     category: "mobile",
     price: 799,
@@ -381,7 +381,7 @@ const products = [
   {
     id: "13",
     count: 0,
-    productName: "One Plus Nord",
+    productName: "One Plus",
     imgUrl: productImg19,
     category: "mobile",
     price: 799,
@@ -405,7 +405,7 @@ const products = [
   {
     id: "14",
     count: 0,
-    productName: "Apple iPhone 13 Pro",
+    productName: "iPhone 13",
     imgUrl: productImg20,
     category: "mobile",
     price: 899,
@@ -429,7 +429,7 @@ const products = [
   {
     id: "15",
     count: 0,
-    productName: "Samsung Galaxy S22",
+    productName: "Galaxy S22",
     imgUrl: productImg21,
     category: "mobile",
     price: 699,
@@ -477,9 +477,9 @@ const products = [
   {
     id: "17",
     count: 0,
-    productName: "Timex Easy Reader Watch",
+    productName: "Timex Watch",
     imgUrl: productImg23,
-    category: "watch",
+    category: "wireless",
     price: 299,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
@@ -549,7 +549,7 @@ const products = [
   {
     id: "20",
     count: 0,
-    productName: "Beat Studio Wireless",
+    productName: "Beat Wireless",
     imgUrl: productImg25,
     category: "wireless",
     price: 199,
@@ -592,6 +592,29 @@ const products = [
   //   ],
   //   avgRating: 4.8,
   // },
+  {
+    id: "23",
+    count: 0,
+    productName: "Timex Watch",
+    imgUrl: productImg23,
+    category: "wireless",
+    price: 299,
+    shortDesc:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
+    reviews: [
+      {
+        rating: 4.8,
+        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      },
+      {
+        rating: 4.9,
+        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      },
+    ],
+    avgRating: 4.8,
+  },
 ];
 
 export default products;

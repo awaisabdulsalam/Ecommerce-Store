@@ -22,7 +22,6 @@ nav {
 }
  
 .nav_list {
-    /* display: inline-block; */
     margin: 0 1rem;
     position: relative;
     font-size: 1rem;
@@ -78,11 +77,15 @@ nav ul li a {
     font-weight: 600;
     letter-spacing: .6px;
 }
+ul {
+    list-style-type: none;
+}
 .search_icon_wrapper {
     position: relative;
 } 
 .search_input {
     padding: 6px 15px;
+    margin-bottom: 16px;
     border-radius: 30px;
     border: 1px solid rgb(220, 219, 219);
     font-size: 20px;
@@ -93,7 +96,7 @@ nav ul li a {
  
 .shopping_cart {
     position: absolute;
-    right: 15px;
+    left: 230px;
     top: 18px;
     cursor: pointer;
 }
@@ -133,18 +136,28 @@ nav ul li a {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    /* border: 5px solid black; */
 }
 .hero_section {
     display: flex;
-    place-items: center;
-    grid-template-columns: 300px 1fr;
+    justify-content: center;
     height: 80vh;
     width: 90%;
     position: relative;
-     /* border: 2px solid red;  */
     z-index: 0;
 }
+
+@media (max-width: 468px) {
+    .hero_main {
+        display: grid;
+        place-items: start;
+        height: 90vh;
+    }
+    .hero_section {
+        display: grid;
+    }
+}
+
+
 .hero_section_one {
     display: flex;
     flex-direction: column;
@@ -152,9 +165,11 @@ nav ul li a {
     justify-content: center;
     padding: 60px 0;
     margin-left: 10px;
+    margin-top: 20px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
     height: 90vh;
     width: 300px;
+    border: 2px solid red;
 }
 
 .hero_one_btn {
@@ -193,9 +208,19 @@ nav ul li a {
     justify-content: center;
     padding: 0px 10px 0px 50px;
 }
+
+@media (max-width: 468px) {
+    
+}
 .sub_hero_sec_two {
     display: flex;
     align-items: center;
+}
+
+@media (max-width: 468px) {
+    .sub_hero_sec_two {
+        display: grid;
+    }
 }
 .slider_image {
     height: 300px;
@@ -203,9 +228,13 @@ nav ul li a {
     float: right;
     margin-top: -110px;
 }
-.image_div {
-    /* display: flex;
-    align-items: top; */
+
+@media (max-width: 468px) {
+    .slider_image {
+        height: 250px;
+        width: 250px;
+        margin-top: 20px;
+    }
 }
 
 .hero_content {
@@ -219,10 +248,26 @@ nav ul li a {
     line-height: 60px;
     margin-bottom: 20px;
 }
+
+@media (max-width: 468px) {
+    .hero_heading {
+    font-size: 40px;
+    line-height: 40px;
+    margin-bottom: 10px;
+    }
+}
+
 .hero_desc {
     font-size: 18px;
-    font-size: 500;
+    font-weight: 500;
     margin-bottom: 10px;
+}
+
+@media (max-width: 468px) {
+    .hero_desc {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
 }
 .shop_now {
     font-size: 40px;
@@ -243,6 +288,14 @@ background-color: #5b85e6;
     border-radius: 0.2rem;
     transition: all 0.3s ease;
     cursor: pointer;
+}
+
+@media (max-width: 468px) {
+    .hero_btn {
+    padding: .7rem 1rem;
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
 }
 .hero_btn a {
     color: #fff;
@@ -267,6 +320,13 @@ background-color: #5b85e6;
     transition: transform 0.3s ease;
     padding: 10px 10px;
 }
+@media (max-width: 468px) {
+    .arrow_icon {
+        padding: 5px 5px;
+        margin-top: 0;
+        font-size: 35px;
+    }
+}
 
 .arrow_icon:hover {
     background-color: #5b85e6;
@@ -283,26 +343,26 @@ background-color: #5b85e6;
 
 .parent_products_section {
     display: grid;
-        direction: row;
-        /* place-items: center; */
-        grid-template-columns: 300px 1fr;
-    /* border: 2px solid blue; */
+    direction: row;
+    grid-template-columns: 300px 1fr;
+    border: 5px solid red;
 }
 
-.products_section {
-    /* display: grid; */
-    /* place-items: center; */
-    /* border: 2px solid tomato; */
-    /* justify-content: center; */
-    /* border: 2px solid purple; */
+@media (max-width: 468px) {
+    .parent_products_section { 
+        /* display: grid; */
+        /* direction: column; */
+        border: 2px solid #5b85e6;
+    }
 }
+.home_products_section {
+    border: 2px solid purple;
+}
+
 .products  {
     display: grid;
-    /* justify-content: center; */
-    /* place-items: center; */
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 10px; 
-    /* border: 2px solid black; */
     padding: 30px 30px;
     cursor: pointer;
 }
@@ -310,30 +370,38 @@ background-color: #5b85e6;
     display: grid;
     justify-content: center;
     height: 400px;
-    /* width: 400px; */
     padding: 0 10px;
 }
 .product:hover {
-    /* transition: all 0.3s ease; */
     border: 1px solid gray;
     border-radius: 10px;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
-    transform: translateY(-2px);
+    /* transform: translateY(-2px); */
+}
+.dollar {
+    font-size: 17px;
+    font-weight: 500;
+    /* color: aqua; */
 }
 .add_card {
-    padding: 10px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
     color: #fff;
     background-color: #5b85e6;
+    /* opacity: .4; */
     border: none;
     margin: 5px 0;
-    font-size: 18px;
-    border-radius: 10px;
+    font-size: 12px;
     cursor: pointer;
     transition: all ease-out .3s;
 }
 .add_card:hover {
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
-    transform: translateY(-1px);
+    /* transform: translateY(-1px); */
 }
 .product_img_cont {
     margin: 0 auto;
@@ -344,21 +412,25 @@ background-color: #5b85e6;
 }
 
 
-/*        Card Section   */
+/***************          Card Section      ****************/
 
 .card_section {
     display: flex;
-    justify-content: center;
-    /* border: 4px solid purple; */
 }
 .card_items {
-    /* border: 3px solid orangered; */
-    padding: 0 60px;
+    width: 100%;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .single_card_item {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
+    width: 70%;
+    margin: 10px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 .card_img {
     height: 200px;
@@ -374,12 +446,12 @@ background-color: #5b85e6;
 }
 .card_icon {
     cursor: pointer;
-        /* color: #5b85e6; */
         font-size: 25px;
         margin: 0 5px;
 }
 .one {
     font-size: 25px;
+    margin: 0 15px;
 }
 .change {
     font-size: 20px;
@@ -405,7 +477,8 @@ background-color: #5b85e6;
 }
 
 
-/*   Footer Section */
+/**********************       Footer Section           *******************/
+
 footer {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));

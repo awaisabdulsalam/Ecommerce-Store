@@ -1,6 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 import products from "../../products";
 export const initialState = [];
+let newInitialState = new Set((initialState) => )
 
 const UserSlice = createSlice({
   name: "users",
@@ -20,6 +21,7 @@ const UserSlice = createSlice({
     },
     decreaseItems(state, action) {
       const item = state.find((item) => item.id === action.payload);
+      console.log(Array.isArray(item));
       if (item) {
         item.count -= 1;
       }
@@ -38,7 +40,6 @@ const UserSlice = createSlice({
     },
   },
 });
-// console.log(initialState);
 
 export default UserSlice.reducer;
 export const {

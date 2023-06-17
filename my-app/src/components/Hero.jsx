@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import image1 from "../images/double-sofa-01.png";
 import image2 from "../images/phone-05.jpg";
@@ -7,7 +8,24 @@ import image4 from "../images/wireless-01.png";
 import image5 from "../images/arm-chair-01.jpg";
 
 const Hero = () => {
-  const imageArray = [image1, image2, image3, image4, image5];
+  const imageArray = [
+    {
+      img: image1,
+    },
+    {
+      img: image2,
+    },
+    {
+      img: image3,
+    },
+    {
+      img: image4,
+    },
+    {
+      img: image5,
+    },
+    // image3, image4, image5
+  ];
 
   const [sliderImage, setSliderImage] = useState(0);
 
@@ -35,14 +53,16 @@ const Hero = () => {
                 </p>
               </div>
               <div>
-                <button className="hero_btn">Visit Now</button>
+                <Link to="/Ecommerce-Store/products">
+                  <button className="hero_btn">Visit Now</button>
+                </Link>
               </div>
             </div>
-            {imageArray.map((image, index) => {
+            {imageArray.map((item, index) => {
               return (
                 sliderImage === index && (
                   <div key={index} className="image_div">
-                    <img src={image} alt="Image" className="slider_image" />
+                    <img src={item.img} alt="Image" className="slider_image" />
                   </div>
                 )
               );
