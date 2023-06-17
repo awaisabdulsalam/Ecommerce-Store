@@ -3,7 +3,6 @@ import { AiFillPlusSquare, AiFillMinusSquare } from 'react-icons/ai';
 import { MdDelete } from 'react-icons/md';
 import { increaseItems,decreaseItems, removeItem, filterItems } from "../store/slices/UserSlice";
 import { useEffect } from "react";
-import { useState } from "react";
 
 const Card = () => {
 
@@ -15,7 +14,6 @@ const Card = () => {
 
   console.log(data);
 
-  // const [removeProduct, setRemoveProduct] = useState(data);
 
   const deleteItem = (id) => {
     dispatch(removeItem(id))
@@ -26,9 +24,6 @@ const Card = () => {
 
   const decreaseItem = (id) => {
     dispatch(decreaseItems(id));
-    // if(removeProduct.length < 0){
-    //   setRemoveProduct(0);
-    // }
   }
   useEffect(() => {
     filterItems()
@@ -45,7 +40,7 @@ const Card = () => {
 
 const totalPrice = findTotalPrice();
 
-
+const filterCount = data.filter((item) => item.count > 0);
   return (
     <>
       <section className="card_section">

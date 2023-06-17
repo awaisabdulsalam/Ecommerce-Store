@@ -1,14 +1,16 @@
 import { createSlice } from "@reduxjs/toolkit";
 import products from "../../products";
 export const initialState = [];
-let newInitialState = new Set((initialState) => )
 
 const UserSlice = createSlice({
   name: "users",
   initialState,
   reducers: {
     addItem(state, action) {
-      state.push(action.payload);
+      const items = state.find((item) => item.id === action.payload.id)
+      if(!items) {
+        state.push(action.payload);
+      }
     },
     removeItem(state, action) {
       return state.filter((item) => item.id !== action.payload);
@@ -22,7 +24,7 @@ const UserSlice = createSlice({
     decreaseItems(state, action) {
       const item = state.find((item) => item.id === action.payload);
       console.log(Array.isArray(item));
-      if (item) {
+      if (item && item.count > 0) {
         item.count -= 1;
       }
     },
