@@ -2,7 +2,7 @@
 const Sidebar = ({ filterCategory, inputText, setInputText, categories }) => {
 
   return (
-    <div>
+    <div className="sidebar_btns">
       {categories.map((category, index) => {
         return (
           <div key={index} className="hero_one_btn">

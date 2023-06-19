@@ -32,7 +32,7 @@ const HomeProducts = () => {
         <section className="parent_products_section">
           <section className="hero_section_one">
             <section className="sidebar_content">
-              <ul>
+              <ul className="placeholder">
                 <li className="nav_list search_icon_wrapper">
                   <input
                     type="text"
