@@ -1,6 +1,5 @@
 
 const Sidebar = ({ filterCategory, inputText, setInputText, categories }) => {
-  // const categories = ["all", "chair", "sofa", "mobile", "watch", "wireless"];
 
   return (
     <div>

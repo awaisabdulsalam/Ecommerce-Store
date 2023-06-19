@@ -9,12 +9,11 @@ const HomeProducts = () => {
     "all",
     ...new Set(products.map((product) => product.category)),
   ];
-  
+
   const [allProducts, setAllProducts] = useState(products);
   const [categories, setCategories] = useState(allCategories);
 
-   const [inputText, setInputText] = useState("");
-
+  const [inputText, setInputText] = useState("");
 
   const filterCategory = (category) => {
     if (category === "all") {
@@ -32,25 +31,27 @@ const HomeProducts = () => {
       <main>
         <section className="parent_products_section">
           <section className="hero_section_one">
-            <ul>
-              <li className="nav_list search_icon_wrapper">
-                <input
-                  type="text"
-                  placeholder="Search"
-                  className="search_input"
-                  value={inputText}
-                  onChange={(e) => setInputText(e.target.value)}
-                />
-                <FaSearch className="shopping_cart" />
-              </li>
-            </ul>
-            <Sidebar
-              categories={categories}
-              filterCategory={filterCategory}
-              inputText={inputText}
-              setInputText={setInputText}
-              allProducts={allProducts}
-            />
+            <section className="sidebar_content">
+              <ul>
+                <li className="nav_list search_icon_wrapper">
+                  <input
+                    type="text"
+                    placeholder="Search"
+                    className="search_input"
+                    value={inputText}
+                    onChange={(e) => setInputText(e.target.value)}
+                  />
+                  <FaSearch className="shopping_cart" />
+                </li>
+              </ul>
+              <Sidebar
+                categories={categories}
+                filterCategory={filterCategory}
+                inputText={inputText}
+                setInputText={setInputText}
+                allProducts={allProducts}
+              />
+            </section>
           </section>
           <section className="home_products_section">
             {inputText && <SelectedProduct inputText={inputText} />}
