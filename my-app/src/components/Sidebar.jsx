@@ -7,11 +7,11 @@ const Sidebar = ({ filterCategory, inputText, setInputText, categories }) => {
         return (
           <div key={index} className="hero_one_btn">
             <button
-              className={`category_btn ? ${
+              className={`category_btn ${
                 category === inputText ? "active" : ""
               }`}
               onClick={() => {
-                setInputText("")
+                setInputText("");
                 return filterCategory(category);
               }}
             >
