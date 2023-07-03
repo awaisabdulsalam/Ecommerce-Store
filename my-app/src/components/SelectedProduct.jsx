@@ -38,11 +38,11 @@ const SelectedProduct = ({ inputText, allProducts }) => {
                       />
                     </div>
                     <div>
-                      <h1>
+                      <h2>{product.productName}</h2>
+                      <h1 className="price">
                         <span className="dollar"> $ </span>
                         {product.price}
                       </h1>
-                      <h2>{product.productName}</h2>
                       <p>{product.shortDesc}</p>
                       <button
                         className="add_card"
@@ -66,11 +66,11 @@ const SelectedProduct = ({ inputText, allProducts }) => {
                       />
                     </div>
                     <div>
-                      <h1>
+                      <h2>{allProducts.productName}</h2>
+                      <h1 className="price">
                         {" "}
                         <span className="dollar"> $ </span> {allProducts.price}
                       </h1>
-                      <h2>{allProducts.productName}</h2>
                       <p>{allProducts.shortDesc}</p>
                       <button
                         className="add_card"
