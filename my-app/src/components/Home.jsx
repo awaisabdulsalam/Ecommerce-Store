@@ -1,3 +1,4 @@
+import CallAction from "./CallAction"
 import Hero from "./Hero"
 import HomeProducts from "./HomeProducts"
 import Icons from "./Icons"
@@ -10,6 +11,7 @@ const Home = () => {
     <Icons />
     <TextImage />
     <HomeProducts />
+    <CallAction />
     </>
   )
 }

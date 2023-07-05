@@ -278,7 +278,7 @@ ul {
     text-transform: capitalize;
     /* border: 1px solid grey; */
     border: 2px solid #5b85e6;
-    border-radius: .2rem;
+    border-radius: 2rem;
     background-color: #fff;
     font-size: 25px;
     font-weight: 500;
@@ -383,13 +383,14 @@ background-color: #5b85e6;
     border: none;
     color: white;
     padding: .7rem 2rem;
+    margin-top: 10px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 1.2rem;
     font-weight: bold;
     letter-spacing: 3px;
-    border-radius: 0.2rem;
+    border-radius: 2rem;
     transition: all 0.3s ease;
     cursor: pointer;
 }
@@ -447,15 +448,27 @@ background-color: #5b85e6;
 .text_img_section {
     display: flex;
     align-items: center;
+    justify-content: center;
     height: 60vh;
     margin: 20px 0;
-    border: 2px solid green;
+    background-color: #5b85e60c;
+    margin: 20px 0;
 }
 .shop_img {
-    height: 200px;
-    width: 200px;
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
 }
 .text_img_one {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.text_img_two {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
     width: 50%;
 }
 /*  */
@@ -614,6 +627,74 @@ background-color: #5b85e6;
     font-size: 32px;
     margin: 20px 0;
 }
+
+
+/**********************       Call to Action           *********************/
+
+.call_action {
+    position: relative;
+    height: 60vh;
+    border: 2px solid purple;
+    /* background-repeat: no-repeat;
+    background-size: cover;
+    opacity: .959; */
+}
+.call_action::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("./images/shopping2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: .8;
+    z-index: -1;
+}
+.call_heading {
+    color: black;
+    font-size: 45px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.call_first {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.call_btn {
+    background-color: #fff;
+    border: 2px solid #5b85e6;
+    color: #5b85e6;
+    padding: .7rem 2rem;
+    margin-top: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: 3px;
+    border-radius: 2rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+.call_btn:hover {
+    background-color: #5b85e6;
+    color: #fff;
+    /* border: #5b85e6; */
+}
+
+
+
+
+
+
+
+
 
 
 /**********************       Footer Section           *******************/

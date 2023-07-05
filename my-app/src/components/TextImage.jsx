@@ -1,5 +1,5 @@
-import Link  from "react-router-dom";
-
+import { Link }  from "react-router-dom";
+import img from "../images/shopping2.jpg"
 
 const TextImage = () => {
   return (
@@ -7,11 +7,11 @@ const TextImage = () => {
       <main>
         <section className="text_img_section">
           <div className="text_img_one">
-            <img src="" alt="Image" className="shop_img" />
+            <img src={img} alt="Image" className="shop_img" />
           </div>
           <div className="text_img_two">
             <h1>Enjoy Best Offers</h1>
-            <p>
+            <p className="hero_desc">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit.
               Perferendis libero adipisci iste dignissimos quisquam est aperiam
               rerum eligendi quas mollitia?
