@@ -330,7 +330,7 @@ ul {
     height: 300px;
     width: 400px;
     float: right;
-    margin-top: -110px;
+    /* margin-top: -110px; */
 }
 
 @media (max-width: 468px) {
@@ -345,6 +345,7 @@ ul {
   display: flex;
   flex-direction: column;
   padding-right: 20px;
+  position: relative;
 }
 .hero_heading {
     font-size: 60px;
@@ -352,6 +353,7 @@ ul {
     line-height: 60px;
     margin-bottom: 20px;
 }
+
 
 @media (max-width: 468px) {
     .hero_heading {
@@ -546,7 +548,7 @@ background-color: #5b85e6;
     /* transform: translateY(-1px); */
 }
 .price {
-    color: #908d8d;
+    color: rgba(28, 27, 27, 0.568);
 }
 .product_img_cont {
     margin: 0 auto;
@@ -634,7 +636,7 @@ background-color: #5b85e6;
 .call_action {
     position: relative;
     height: 60vh;
-    border: 2px solid purple;
+    /* border: 2px solid purple; */
     /* background-repeat: no-repeat;
     background-size: cover;
     opacity: .959; */
@@ -705,6 +707,8 @@ footer {
     height: 50vh;
     place-items: center;
     padding: 0 20px;
+    color: #fff;
+    background-color: #333;
 }
 @media (max-width: 468px) {
     footer {
@@ -724,8 +728,15 @@ footer ul a {
     text-decoration: none;
     font-size: 20px;
     font-weight: 600;
+    line-height: 2rem;
     margin-top: 5px;
+    color: #fff;
+}
+footer ul a:hover {
     color: #5b85e6;
+}
+.foot_text {
+    color: #fff;
 }
 .icons {
     display: flex;
@@ -733,14 +744,20 @@ footer ul a {
 }
 .icon {
     cursor: pointer;
-    color: #5b85e6;
     font-size: 25px;
     margin: 0 5px;
+    color: #fff;
 }
-.by_awias > h3{
+.icon:hover {
+    color: #5b85e6;
+}
+hr {
+    color: #ffffff;
+    height: .2px;
+}
+.by_awais > h3{
     display: flex;
     justify-content: center;
-    /* margin: 10px 0; */
     font-size: 32px;
     font-weight: 700;
     height: 70px;
@@ -750,4 +767,10 @@ footer ul a {
     background-color: #333;
     color: #fff;
     padding: 1rem;
+}
+.by_awais>h3:hover {
+    text-decoration: underline;
+    cursor: pointer;
+    /* color: rgb(119, 240, 240); */
+    color: #5b85e6;
 }
