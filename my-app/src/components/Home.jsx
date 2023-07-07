@@ -4,14 +4,15 @@ import HomeProducts from "./HomeProducts"
 import Icons from "./Icons"
 import TextImage from "./TextImage"
 
+
 const Home = () => {
   return (
     <>
-      <Hero />
-      <Icons />
-      <TextImage />
-      <HomeProducts />
-      <CallAction />
+      <Hero  />
+      <Icons  />
+      <TextImage  />
+      <HomeProducts  />
+      <CallAction  />
     </>
   );
 }
