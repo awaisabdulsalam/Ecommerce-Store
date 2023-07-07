@@ -11,7 +11,7 @@ const Footer = () => {
             sed earum autem?
           </p>
         </div>
-        <div>
+        <div className="foot_pages">
           <ul>
             <li>
               <Link to="/Ecommerce-Store">Home</Link>
