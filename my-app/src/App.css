@@ -55,6 +55,12 @@ nav {
     background-color: #5b85e6;
 }
 
+.logo_img {
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+}
+
 h1 {
     font-size: 25px;
     font-weight: 600;
@@ -455,6 +461,13 @@ background-color: #5b85e6;
     margin: 20px 0;
     background-color: #5b85e60c;
     margin: 20px 0;
+}
+
+.text_heading {
+    font-size: 60px;
+        font-weight: 800;
+        line-height: 60px;
+        margin-bottom: 20px;
 }
 .shop_img {
     height: 300px;

@@ -1,7 +1,7 @@
 import { FaShoppingCart } from "react-icons/fa";
 import { Link, useLocation } from "react-router-dom";
 import { useSelector } from "react-redux";
-
+import logo from "../images/eco-logo.png"
 const Header = () => {
   const data = useSelector((state) => {
     return state.users;
@@ -19,7 +19,10 @@ const Header = () => {
     <>
       <nav>
         <div>
-          <h2 className="logo">Eco Logo</h2>
+          {/* <h2 className="logo">Eco Logo</h2> */}
+          <Link to="/Ecommerce-Store">
+          <img src={logo} alt="" className="logo_img" />
+          </Link>
         </div>
         <div>
           <ul>

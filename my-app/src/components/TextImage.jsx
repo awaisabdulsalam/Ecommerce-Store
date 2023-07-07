@@ -10,7 +10,7 @@ const TextImage = () => {
             <img src={img} alt="Image" className="shop_img" />
           </div>
           <div className="text_img_two">
-            <h1>Enjoy Best Offers</h1>
+            <h1 className="text_heading">Enjoy Best Offers</h1>
             <p className="hero_desc">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit.
               Perferendis libero adipisci iste dignissimos quisquam est aperiam
