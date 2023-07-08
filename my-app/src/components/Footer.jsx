@@ -14,26 +14,28 @@ const Footer = () => {
         <div className="foot_pages">
           <ul>
             <li>
-              <Link to="/Ecommerce-Store">Home</Link>
+              {/* <Link to="/Ecommerce-Store">Home</Link> */}
+              <Link to="/">Home</Link>
             </li>
             <li>
-              <Link to="/Ecommerce-Store/products">Products</Link>
+              {/* <Link to="/Ecommerce-Store/products">Products</Link> */}
+              <Link to="/products">Products</Link>
             </li>
             <li>
-              <a href="">About</a>
+              <a href="/">About</a>
             </li>
             <li>
-              <a href="">Contact</a>
+              <a href="/">Contact</a>
             </li>
           </ul>
         </div>
         <div>
           <ul>
             <li>
-              <a href="">Privacy</a>
+              <a href="/">Privacy</a>
             </li>
             <li>
-              <a href="">Terms</a>
+              <a href="/">Terms</a>
             </li>
           </ul>
         </div>

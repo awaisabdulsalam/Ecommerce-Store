@@ -56,7 +56,8 @@ const Hero = () => {
                 </p>
               </div>
               <div>
-                <Link to="/Ecommerce-Store/products">
+                {/* <Link to="/Ecommerce-Store/products"> */}
+                <Link to="/products">
                   <button className="hero_btn">Visit Now</button>
                 </Link>
               </div>

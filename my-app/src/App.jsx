@@ -10,12 +10,21 @@ function App() {
 
   return (
     <>
-      <BrowserRouter basename="/Ecommerce-Store">
+      {/* <BrowserRouter basename="/Ecommerce-Store">
         <Header />
         <Routes>
           <Route exact path="/Ecommerce-Store/" element={<Home />} />
           <Route path="/Ecommerce-Store/products" element={<Products />} />
           <Route path="/Ecommerce-Store/card" element={<Card />} />
+        </Routes>
+        <Footer />
+      </BrowserRouter> */}
+      <BrowserRouter>
+        <Header />
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route path="/products" element={<Products />} />
+          <Route path="/card" element={<Card />} />
         </Routes>
         <Footer />
       </BrowserRouter>

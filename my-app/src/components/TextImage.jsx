@@ -16,7 +16,8 @@ const TextImage = () => {
               Perferendis libero adipisci iste dignissimos quisquam est aperiam
               rerum eligendi quas mollitia?
             </p>
-            <Link to="/Ecommerce-Store/products">
+            {/* <Link to="/Ecommerce-Store/products"> */}
+            <Link to="/products">
               <button className="hero_btn">Visit Now</button>
             </Link>
           </div>

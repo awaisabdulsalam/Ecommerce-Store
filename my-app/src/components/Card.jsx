@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from "react-redux"
 import { AiFillPlusSquare, AiFillMinusSquare } from 'react-icons/ai';
 import { MdDelete } from 'react-icons/md';
-import { increaseItems,decreaseItems, removeItem, filterItems } from "../store/slices/UserSlice";
+import { increaseItems, decreaseItems, removeItem, filterItems } from "../store/slices/UserSlice";
 import { useEffect } from "react";
 
 const Card = () => {
@@ -11,9 +11,6 @@ const Card = () => {
   const data = useSelector((state) => {
     return state.users
   });
-
-  console.log(data);
-
 
   const deleteItem = (id) => {
     dispatch(removeItem(id))

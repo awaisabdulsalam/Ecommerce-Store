@@ -20,7 +20,8 @@ const Header = () => {
       <nav>
         <div>
           {/* <h2 className="logo">Eco Logo</h2> */}
-          <Link to="/Ecommerce-Store">
+          {/* <Link to="/Ecommerce-Store"> */}
+          <Link to="/">
           <img src={logo} alt="" className="logo_img" />
           </Link>
         </div>
@@ -28,24 +29,30 @@ const Header = () => {
           <ul>
             <li
               className={`nav_list ${
-                isActivated("/Ecommerce-Store") ? "active" : ""
+                // isActivated("/Ecommerce-Store") ? "active" : ""
+                isActivated("/") ? "active" : ""
               }`}
             >
-              <Link to="/Ecommerce-Store">Home</Link>
+              {/* <Link to="/Ecommerce-Store">Home</Link> */}
+              <Link to="/">Home</Link>
             </li>
             <li
               className={`nav_list ${
-                isActivated("/Ecommerce-Store/products") ? "active" : ""
+                // isActivated("/Ecommerce-Store/products") ? "active" : ""
+                isActivated("/products") ? "active" : ""
               }`}
             >
-              <Link to="/Ecommerce-Store/products">Products</Link>
+              {/* <Link to="/Ecommerce-Store/products">Products</Link> */}
+              <Link to="/products">Products</Link>
             </li>
             <li
               className={`nav_list ${
-                isActivated("/Ecommerce-Store/card") ? "active" : ""
+                // isActivated("/Ecommerce-Store/card") ? "active" : ""
+                isActivated("/card") ? "active" : ""
               }`}
             >
-              <Link to="/Ecommerce-Store/card">
+              {/* <Link to="/Ecommerce-Store/card"> */}
+              <Link to="/card">
                 <FaShoppingCart className="shopping-cart" />
                 <span
                   className={
