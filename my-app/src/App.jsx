@@ -22,7 +22,7 @@ function App() {
       <BrowserRouter>
         <Header />
         <Routes>
-          <Route exact path="/" element={<Home />} />
+          <Route exact path="/Ecommerce-Store" element={<Home />} />
           <Route path="/products" element={<Products />} />
           <Route path="/card" element={<Card />} />
         </Routes>

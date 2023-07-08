@@ -21,8 +21,8 @@ const Header = () => {
         <div>
           {/* <h2 className="logo">Eco Logo</h2> */}
           {/* <Link to="/Ecommerce-Store"> */}
-          <Link to="/">
-          <img src={logo} alt="" className="logo_img" />
+          <Link to="/Ecommerce-Store">
+            <img src={logo} alt="" className="logo_img" />
           </Link>
         </div>
         <div>
@@ -34,7 +34,7 @@ const Header = () => {
               }`}
             >
               {/* <Link to="/Ecommerce-Store">Home</Link> */}
-              <Link to="/">Home</Link>
+              <Link to="/Ecommerce-Store">Home</Link>
             </li>
             <li
               className={`nav_list ${

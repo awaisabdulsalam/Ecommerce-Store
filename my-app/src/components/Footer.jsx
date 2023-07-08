@@ -15,7 +15,7 @@ const Footer = () => {
           <ul>
             <li>
               {/* <Link to="/Ecommerce-Store">Home</Link> */}
-              <Link to="/">Home</Link>
+              <Link to="/Ecommerce-Store">Home</Link>
             </li>
             <li>
               {/* <Link to="/Ecommerce-Store/products">Products</Link> */}
@@ -64,9 +64,7 @@ const Footer = () => {
       </footer>
       <hr />
       <div className="by_awais">
-        <h3>
-          Made by Awais
-        </h3>
+        <h3>Made by Awais</h3>
       </div>
       <hr />
     </>
