@@ -1,3 +1,4 @@
+import "animate.css";
 
 const Sidebar = ({ filterCategory, inputText, setInputText, categories }) => {
 

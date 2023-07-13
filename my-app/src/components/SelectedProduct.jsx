@@ -3,6 +3,7 @@ import { addItem } from "../store/slices/UserSlice";
 import products from "../products";
 import { useState } from "react";
 import { FaPlus } from "react-icons/fa";
+import "animate.css";
 
 const SelectedProduct = ({ inputText, allProducts }) => {
 
@@ -29,7 +30,7 @@ const SelectedProduct = ({ inputText, allProducts }) => {
           {inputText
             ? filteredProducts.map((product) => {
                 return (
-                  <div key={product.id} className="product">
+                  <div key={product.id} className="product animate__animated animate__fadeInUp">
                     <div className="product_img_cont">
                       <img
                         src={product.imgUrl}
@@ -57,7 +58,10 @@ const SelectedProduct = ({ inputText, allProducts }) => {
               :
               allProducts.map((allProducts) => {
                 return (
-                  <div key={allProducts.id} className="product">
+                  <div
+                    key={allProducts.id}
+                    className="product animate__animated animate__fadeInUp"
+                  >
                     <div className="product_img_cont">
                       <img
                         src={allProducts.imgUrl}
@@ -75,7 +79,9 @@ const SelectedProduct = ({ inputText, allProducts }) => {
                       <button
                         className="add_card"
                         onClick={() => addToCart(allProducts)}
-                      > <FaPlus className="" />
+                      >
+                        {" "}
+                        <FaPlus className="" />
                       </button>
                     </div>
                   </div>

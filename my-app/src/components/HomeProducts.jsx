@@ -3,6 +3,7 @@ import SelectedProduct from "./SelectedProduct";
 import { useState } from "react";
 import products from "../products";
 import { FaSearch } from "react-icons/fa";
+import "animate.css";
 
 const HomeProducts = () => {
   const allCategories = [
@@ -31,7 +32,7 @@ const HomeProducts = () => {
       <main>
         <section className="parent_products_section">
           <section className="hero_section_one">
-            <section className="sidebar_content">
+            <section className="sidebar_content animate__animated animate__fadeInUp">
               <ul className="placeholder">
                 <li className="nav_list search_icon_wrapper">
                   <input

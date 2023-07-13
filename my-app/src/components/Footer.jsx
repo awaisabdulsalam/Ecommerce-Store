@@ -1,21 +1,23 @@
 import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from 'react-icons/fa';
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
+import "animate.css";
+
 const Footer = () => {
   return (
     <>
       <footer>
-        <div className="foot_text">
+        <div className="foot_text animate__animated animate__fadeInUp">
           <h4>Eco Logo</h4>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
             sed earum autem?
           </p>
         </div>
-        <div className="foot_pages">
+        <div className="foot_pages animate__animated animate__fadeInUp">
           <ul>
             <li>
               {/* <Link to="/Ecommerce-Store">Home</Link> */}
-              <Link to="/Ecommerce-Store">Home</Link>
+              <Link to="/">Home</Link>
             </li>
             <li>
               {/* <Link to="/Ecommerce-Store/products">Products</Link> */}
@@ -29,7 +31,7 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-        <div>
+        <div className="animate__animated animate__fadeInUp">
           <ul>
             <li>
               <a href="/">Privacy</a>
@@ -40,7 +42,7 @@ const Footer = () => {
           </ul>
         </div>
         <div>
-          <div className="icons">
+          <div className="icons animate__animated animate__fadeInUp">
             <a href="https://twitter.com/TheAwais170" target="_blanck">
               <FaTwitter className="icon" />
             </a>
@@ -63,7 +65,7 @@ const Footer = () => {
         </div>
       </footer>
       <hr />
-      <div className="by_awais">
+      <div className="by_awais animate__animated animate__fadeInUp">
         <h3>Made by Awais</h3>
       </div>
       <hr />

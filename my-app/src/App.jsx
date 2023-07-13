@@ -1,8 +1,9 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
+
 import Home from "./components/Home";
 import Products from "./components/HomeProducts";
 import Card from "./components/Card";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 
@@ -22,7 +23,7 @@ function App() {
       <BrowserRouter>
         <Header />
         <Routes>
-          <Route exact path="/Ecommerce-Store" element={<Home />} />
+          <Route exact path="/" element={<Home />} />
           <Route path="/products" element={<Products />} />
           <Route path="/card" element={<Card />} />
         </Routes>

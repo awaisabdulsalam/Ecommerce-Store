@@ -1,8 +1,10 @@
 import { FaInstagram, FaTruck, FaChartLine, FaStar } from "react-icons/fa";
+import "animate.css";
+
 const Icons = () => {
   return (
     <main>
-      <section className="for_icon">
+      <section className="for_icon animate__animated animate__fadeInUp">
         <div className="parent_icons">
           <div className="special_icons">
             <FaChartLine className="head_icon" />

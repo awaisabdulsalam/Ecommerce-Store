@@ -1,6 +1,7 @@
-import {  useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import "animate.css";
 
 import image1 from "../images/double-sofa-01.png";
 import image2 from "../images/phone-05.jpg";
@@ -37,14 +38,12 @@ const Hero = () => {
     setSliderImage(sliderImage === imageArray.length - 1 ? 0 : sliderImage + 1);
   };
 
-
-
   return (
-    <main className="hero_main" data-aos="fade-up">
+    <main className="hero_main">
       <section className="hero_section">
         <section className="hero_section_two">
           <div className="sub_hero_sec_two">
-            <div className="hero_content">
+            <div className="hero_content animate__animated animate__fadeInLeft">
               <div>
                 <h1 className="hero_heading">50% Off for First Shopping</h1>
               </div>
@@ -65,7 +64,10 @@ const Hero = () => {
             {imageArray.map((item, index) => {
               return (
                 sliderImage === index && (
-                  <div key={index} className="image_div">
+                  <div
+                    key={index}
+                    className="image_div animate__animated animate__fadeInRight"
+                  >
                     <img src={item.img} alt="Image" className="slider_image" />
                   </div>
                 )
